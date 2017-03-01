@@ -1,0 +1,31 @@
+
+// Bootstrap Variables
+$icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+
+// Import Bootstrap
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body{
+  background: #AFA78B;
+}
+
+img {
+  max-width: 100%;
+  width: auto;
+}
+.fish{
+  font-size: 85px;
+  text-shadow: 3px 3px 5px #33440F;
+  color: #67707B;
+}
+.myfish{
+  border-radius: 8px;
+  width: 320px;
+  height: 400px;
+}
