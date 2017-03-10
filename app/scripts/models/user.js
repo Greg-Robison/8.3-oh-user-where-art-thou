@@ -1,7 +1,7 @@
 var Backbone = require('backbone');
 
 var User = Backbone.Model.extend({
-  idAttribute: '_id',
+  idAttribute: 'objectId',
 });
 
 var UserCollection = Backbone.Collection.extend({

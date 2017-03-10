@@ -9,12 +9,10 @@ var UserCollection = require('../models/user').UserCollection;
 var setupAjax = require('../utilities');
 var apiUrl = 'https://tiny-parse-server.herokuapp.com';
 
-console.log(setupAjax);
 
 class LoginLayout extends React.Component{
   handleSignUp(e){
     e.preventDefault();
-    console.log('hey idiot');
     var user = {
       username: $('#signup-email').val(),
       password: $('#signup-password').val(),
@@ -36,13 +34,11 @@ class LoginLayout extends React.Component{
     var url = apiUrl + '/login?username=' +
             encodeURIComponent(username) + '&' +
             'password=' + encodeURIComponent(password);
-console.log(url);
     $.get(url).then(function(data){
-      console.log(data);
       var userData = JSON.stringify(data);
       localStorage.setItem('user', userData);
-      console.log(userData);
       setupAjax(data);
+      Backbone.history.navigate('tail/', {trigger: true});
     });
 
   };
