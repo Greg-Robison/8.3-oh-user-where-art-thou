@@ -5779,4 +5779,8 @@ img {
   border-radius: 8px;
   width: 320px;
   height: 400px; }
+
+li {
+  list-style: none; }
+
 /*# sourceMappingURL=app.css.map */
